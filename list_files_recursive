@@ -1,0 +1,17 @@
+import os
+
+def list_dir(dir_path, res):
+    # print "Searching in {} ".format(dir_path)
+    for f in os.listdir(dir_path):
+        full_src_path = os.path.join(dir_path, f)
+        # print "Full Path in {} ".format(full_src_path)
+        if os.path.isdir(full_src_path):
+            list_dir(full_src_path, res)
+        else:
+            res.append(full_src_path)
+
+# Usage example
+result = list()
+list_dir("/opt/repos/pareto/src", result)
+for x in result:
+  print x
