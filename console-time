@@ -1,0 +1,13 @@
+# Show time when every command is executed in command line
+
+import sys
+import datetime
+
+
+class ClockPS1(object):
+  def __repr__(self):
+    now = datetime.datetime.now()
+    return str(now.strftime("%H:%M:%S >>> "))
+
+
+sys.ps1 = ClockPS1()
