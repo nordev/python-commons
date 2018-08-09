@@ -1,0 +1,5 @@
+# https://stackoverflow.com/questions/11555468/how-should-i-read-a-file-line-by-line-in-python
+
+with open('filename.txt') as fp:
+    for line in fp:
+        print line
